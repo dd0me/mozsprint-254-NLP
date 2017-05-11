@@ -15,7 +15,7 @@ Civic participation challenges and human computer interaction current realities 
 # PROBLEM:
 There is a wide gap of applied and easily adoptable technologies  to guide the development of a slang I.e Kiswahili-English-local dialect Lexicon of negative and positive sentiment that is highly accurate in its predictive power and capabilities for sentiment analysis modeling. Not only is this missing for the more than 90 Million Swahili speaking inhabitants; natural language processing techniques that take into account the hybrid languages that come out of combination of local dialect phrases with Swahili and English words  are missing.
 
-# MY PROPOSED SOLUTIONS:
+# PROPOSED SOLUTIONS:
 
 Building and Open Source enterprise level technologies that do the following:
 1)Apply machine learning classifiers for sorting and categorizing hate speech or inflammatory language that is likely to lead to hate crime by data mining of social media  to build a sentiment analysis tool of the issues leading up to the general elections, by tracking conversations and posts in derived Swahili-english-and other-Kenyan-native dialect, to inform civic awareness interventions and map out hot spots.
@@ -26,10 +26,15 @@ Open Source and crowd source the code and building data for replication in situa
 ## Getting Started
 
 Step 1:We will will be collecting Natural Language data in Social Media spaces for the periods, June 2007 to June 2008, June 2013-June 2014 and January to June 2017 from your respective Social Media Accounts and separating the positive and negative sentiment in their respective files, every collaborator is expected to mine this data from their individual social media accounts.
+
 Step 2:Clean up and chack for data quality
+
 Step 3:Build a document term matrix of the sentiments and aggregate the data into two files from the individual files being populated.
+
 Step 4:Using Random Forest concepts, feed the data into R scripts separating Training Data from Test Data.
+
 Step 5:If the model works we move from data at rest to data in motion by automating data retrieval, cleaning,Document Term Matrix Building, and analysis.
+
 Step 6: Build test data sets that can be replicated and used for further research.
 
 
