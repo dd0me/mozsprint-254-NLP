@@ -18,7 +18,9 @@ There is a wide gap of applied and easily adoptable technologies  to guide the d
 # PROPOSED SOLUTIONS:
 
 Building and Open Source enterprise level technologies that do the following:
+
 1)Apply machine learning classifiers for sorting and categorizing hate speech or inflammatory language that is likely to lead to hate crime by data mining of social media  to build a sentiment analysis tool of the issues leading up to the general elections, by tracking conversations and posts in derived Swahili-english-and other-Kenyan-native dialect, to inform civic awareness interventions and map out hot spots.
+
 2)Develop Swahili-english-and other-Kenyan-native dialect, lexicons from real live experiences that is automated in building a reinforced learning model to be used by natural language processing applications in text and sentiment analysis in the 90 million Swahili speaking East African community, with an aim of replicating it across other dialects with a reinforced machine learning model. This is because natural language in East Africa is mixed by pidgin derivations of many languages.
 Open Source and crowd source the code and building data for replication in situations that could  benefit from this research. For example : conversation bots in native tongue.
 
