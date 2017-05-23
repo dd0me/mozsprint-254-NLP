@@ -1,1 +1,18 @@
++#We now create a document term matrix by aggregating,
++#the individual phrases from the social media accounts into a corpus
+
++install.package("tm", dependencies = TRUE)
+
++fb.txt <- system.file("texts", "fs-negative-sentiment-agg", package = "tm")
+
+
+
+
+
+
+
+
+
+
+
 
