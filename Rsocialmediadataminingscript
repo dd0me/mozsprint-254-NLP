@@ -1,1 +1,23 @@
++#Not run
++#downloads all necessary packages
++#with their dependencies
+
++install.packages("Rfacebook", dependencies = TRUE)
+
+#load the required packages
++library("Rfacebook")
++library("httr")
+
+#define key objects necessary for the argument 
++app_id <- 
++app_secret <-
+
++#we need the data with geo tags for later use, 
++#the personal information will be anonymized
++#before training and test data sets are aggregated
++#we will therefore declare extended_permissions=TRUE
+
++fb.OAuth <- fbOAuth(app_id, app_secret, extended_permissions = TRUE,
++legacy_permissions = FALSE)
+
 
