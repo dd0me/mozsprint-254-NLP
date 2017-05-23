@@ -29,7 +29,7 @@ Open Source and crowd source the code and building data for replication in situa
 
 Step 1:We will will be collecting Natural Language data in Social Media spaces for the periods, June 2007 to June 2008, June 2013-June 2014 and January to June 2017 from your respective Social Media Accounts and separating the positive and negative sentiment in their respective files, every collaborator is expected to mine this data from their individual social media accounts.
 
-Step 2:Clean up and chack for data quality
+Step 2:Clean up and check for data quality
 
 Step 3:Build a document term matrix of the sentiments and aggregate the data into two files from the individual files being populated.
 
