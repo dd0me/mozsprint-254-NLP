@@ -1,3 +1,5 @@
++#Beginning of automated data collection script for facebook
+
 +#Not run
 +#downloads all necessary packages
 +#with their dependencies
@@ -9,6 +11,7 @@
 +library("httr")
 
 #define key objects necessary for the argument 
+#provided on execution of script
 +app_id <- 
 +app_secret <-
 
