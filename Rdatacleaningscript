@@ -1,13 +1,12 @@
-+#' function to clean text
-+Clean_Text_Block <- function(text){
++#' text cleaning
++Cleaned <- function(text){
     +if(length(text) <= 1){
-        +# Check to see if there is any text at all with another conditional
-        +if(length(text) == 0){
-            +cat("There was no text in this document! \n")
+                +if(length(text) == 0){
+            +cat("No text")
             +to_return <- list(num_tokens = 0, unique_tokens = 0, text = "")
         +}else{
-            +# If there is , and only only one line of text then tokenize it
-           + clean_text <- Clean_String(text)
+            +# creating tokens
+           + Cleaned <- Clean_String(text)
             +num_tok <- length(clean_text)
             +num_uniq <- length(unique(clean_text))
             +to_return <- list(num_tokens = num_tok, unique_tokens = num_uniq, text = clean_text)
