@@ -23,4 +23,10 @@
 +fb.OAuth <- fbOAuth(app_id, app_secret, extended_permissions = TRUE,
 +legacy_permissions = FALSE)
 
+election.period1 <- getGroup(group_id, token, n = 1000000, since = 2007/6/1, until = 2008/6/30)
+election.period2 <- getGroup(group_id, token, n = 1000000, since = 2013/6/1, until = 2014/6/30)
+election.period3 <- getGroup(group_id, token, n = 1000000, since = 2017/6/1, until = 2018/6/30)
+
+
+
 
