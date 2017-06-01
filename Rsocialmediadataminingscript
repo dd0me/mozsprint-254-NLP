@@ -23,12 +23,20 @@
 +fb.OAuth <- fbOAuth(app_id, app_secret, extended_permissions = TRUE,
 +legacy_permissions = FALSE)
 
-gelection.period1 <- getGroup(group_id, token, n = 1000000, since = 2007/6/1, until = 2008/6/30)
-gelection.period2 <- getGroup(group_id, token, n = 1000000, since = 2013/6/1, until = 2014/6/30)
-gelection.period3 <- getGroup(group_id, token, n = 1000000, since = 2017/6/1, until = 2018/6/30)
++gelection.period1 <- getGroup(group_id, token, n = 1000000, since = 2007/6/1, until = 2008/6/30)
++gelection.period2 <- getGroup(group_id, token, n = 1000000, since = 2013/6/1, until = 2014/6/30)
++gelection.period3 <- getGroup(group_id, token, n = 1000000, since = 2017/6/1, until = 2018/6/30)
 
- ielection.period1 <- (users, token, private_info = FALSE)
- ielection.period2 <- (users, token, private_info = FALSE)
- ielection.period3 <- (users, token, private_info = FALSE)
++ielection.period1 <- (users, token, private_info = FALSE)
++ielection.period2 <- (users, token, private_info = FALSE)
++ielection.period3 <- (users, token, private_info = FALSE)
+ 
+ +# Convert to data frame
+ +gelection.period1 <- do.call("rbind", lapply(rdmTweets, as.data.frame))
+ +gelection.period2 <- do.call("rbind", lapply(rdmTweets, as.data.frame))
+ +gelection.period3 <- do.call("rbind", lapply(rdmTweets, as.data.frame))
 
++ielection.period1 <- do.call("rbind", lapply(rdmTweets, as.data.frame))
++ielection.period2 <- do.call("rbind", lapply(rdmTweets, as.data.frame))
++ielection.period3 <- do.call("rbind", lapply(rdmTweets, as.data.frame))
 
