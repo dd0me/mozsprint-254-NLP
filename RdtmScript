@@ -3,7 +3,11 @@
 
 +install.package("tm", dependencies = TRUE)
 
-+fb.txt <- system.file("texts", "fs-negative-sentiment-agg", package = "tm")
++library("tm")
+
++fb.txt <- system.file("texts", "fs-negative-sentiment-agg")
+
+
 
 
 
