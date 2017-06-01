@@ -40,3 +40,5 @@
 +ielection.period2 <- do.call("rbind", lapply(rdmTweets, as.data.frame))
 +ielection.period3 <- do.call("rbind", lapply(rdmTweets, as.data.frame))
 
+df.all <- rbind(
+
