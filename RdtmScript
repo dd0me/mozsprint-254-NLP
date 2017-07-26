@@ -41,16 +41,12 @@
 +entity1KECorpus <- tm_map(entity1KECorpus, tolower)
 +entity1KECorpus <- tm_map(entity1KECorpus, removePunctuation) 
 +entity1KECorpus <- tm_map(entity1KECorpus, removeNumbers)
-+removeUrl<-function(x)gsub("http[[:alnum:]]*","",x)
-+entity1KE<- tm_map(entity1KE,content_transformer(removeUrl))
-+entity1KE<- tm_map(documents, removeWords, stopwords('english')) 
++removeUrl<- function(x)gsub("http[[:alnum:]]*","",x)
++entity1KECorpus <- tm_map(entity1KE,content_transformer(removeUrl))
++entity1KECorpus <- tm_map(documents, removeWords, stopwords('english')) 
++entity1KEtdm <- TermDocumentCorpus(entity1KECorpus)
 +
 +
-+myCorpus <- tm_map(myCorpus, stemDocument)
-
-
-
-
 +
 +
 +
