@@ -44,7 +44,8 @@
 +removeUrl<- function(x)gsub("http[[:alnum:]]*","",x)
 +entity1KECorpus <- tm_map(entity1KE,content_transformer(removeUrl))
 +entity1KECorpus <- tm_map(documents, removeWords, stopwords('english')) 
-+entity1KEtdm <- TermDocumentCorpus(entity1KECorpus)
++entity1KEtdm <- create_matrix(entity1KECorpus)
++
 +
 +
 +
