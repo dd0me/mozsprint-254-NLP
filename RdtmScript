@@ -1,5 +1,5 @@
 +myPacksToLoad<-c("twitteR","SocialMediaMineR","ROAuth","ggmap","RJSONIO","tm","rcurl","plyr","dplyr","wordcloud","RTextTools",
-+                   "e1071","rparty","instaR")
++                   "e1071","rparty","instaR","stringr","knn","shiny")
 +
 +lapply(myPacksToLoad,require,character.only=TRUE)
 +
@@ -25,7 +25,7 @@
 +                                   39.4424,	37.9782,	35.0015,	35.5988,	35.2697,	34.7229,	40.0586,	35.2854)
 +
 +#Define the Kenya 2017 election enetities of interest and execute the search script
-+n=N #Number of tweets
++N=100000 #Number of tweets
 +S=100 #Radius
 +
 +entity1KE<-do.call(rbind,lapply(1:length(lats), function(i) searchTwitter("string",
@@ -34,10 +34,23 @@
 +                                geocode=paste(lats[i],lons[i],paste0(S,"kms"),sep=","))))
 +
 +#Tweets cleaning and formatting
-+
 +entity1KE<-twListToDF(entity1KE)
++#Create Tweets corpus
++entity1KECorpus <- Corpus(VectorSource(entity1KE$text))
++tm_map(myCorpus,function(x) iconv(enc2utf8(x),sub="byte"))
++entity1KECorpus <- tm_map(entity1KECorpus, tolower)
++entity1KECorpus <- tm_map(entity1KECorpus, removePunctuation) 
++entity1KECorpus <- tm_map(entity1KECorpus, removeNumbers)
++removeUrl<-function(x)gsub("http[[:alnum:]]*","",x)
++entity1KE<- tm_map(entity1KE,content_transformer(removeUrl))
++entity1KE<- tm_map(documents, removeWords, stopwords('english')) 
 +
 +
++myCorpus <- tm_map(myCorpus, stemDocument)
+
+
+
+
 +
 +
 +
