@@ -46,7 +46,8 @@
 +entity1KECorpus <- tm_map(documents, removeWords, stopwords('english')) 
 +entity1KEtdm <- create_matrix(entity1KECorpus)
 +
-+
++container = create_container(entity1KEtdm, as.numeric(as.factor(entity1KECorpus[,2])),
++                               trainSize=1:n, testSize=n+1:k,virgin=FALSE)
 +
 +
 +
