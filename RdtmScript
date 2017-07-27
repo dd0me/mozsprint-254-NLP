@@ -37,20 +37,51 @@
 +entity1KE<-twListToDF(entity1KE)
 +#Create Tweets corpus
 +entity1KECorpus <- Corpus(VectorSource(entity1KE$text))
++
 +tm_map(myCorpus,function(x) iconv(enc2utf8(x),sub="byte"))
++
 +entity1KECorpus <- tm_map(entity1KECorpus, tolower)
++
 +entity1KECorpus <- tm_map(entity1KECorpus, removePunctuation) 
++
 +entity1KECorpus <- tm_map(entity1KECorpus, removeNumbers)
++
 +removeUrl<- function(x)gsub("http[[:alnum:]]*","",x)
++
 +entity1KECorpus <- tm_map(entity1KE,content_transformer(removeUrl))
-+entity1KECorpus <- tm_map(documents, removeWords, stopwords('english')) 
++
++entity1KECorpus <- tm_map(documents, removeWords, stopwords('english'))
++
 +entity1KEtdm <- create_matrix(entity1KECorpus)
 +
 +container = create_container(entity1KEtdm, as.numeric(as.factor(entity1KECorpus[,2])),
 +                               trainSize=1:n, testSize=n+1:k,virgin=FALSE)
 +
++models = train_models(container, algorithms=c("MAXENT" , "SVM", "RF", "BAGGING", "TREE"
++                                                "GLMNET", "SLDA", "BOOSTING", "NNET"))
++results = classify_models(container, list_of_trained_models)
 +
 +
++table(as.numeric(as.factor(tweets[n+1:k, 2])), results[,"MAXENTROPY_LABEL"])
++table(as.numeric(as.factor(tweets[n+1:k, 2])), results[,"SVM_LABEL"])
++table(as.numeric(as.factor(tweets[n+1:k, 2])), results[,"RF_LABEL"])
++table(as.numeric(as.factor(tweets[n+1:k, 2])), results[,"BAGGING_LABEL"])
+=table(as.numeric(as.factor(tweets[n+1:k, 2])), results[,"TREE_LABEL"])
++table(as.numeric(as.factor(tweets[n+1:k, 2])), results[,"GLMNET_LABEL"])
++table(as.numeric(as.factor(tweets[n+1:k, 2])), results[,"SLDA_LABEL"])
++table(as.numeric(as.factor(tweets[n+1:k, 2])), results[,"BOOSTING_LABEL"])
++table(as.numeric(as.factor(tweets[n+1:k, 2])), results[,"NNET_LABEL"])
+
+
++recall_accuracy(as.numeric(as.factor(tweets[n+1:k, 2])), results[,"MAXENTROPY_LABEL"])
++recall_accuracy(as.numeric(as.factor(tweets[n+1:k, 2])), results[,"SVM_LABEL"])
++recall_accuracy(as.numeric(as.factor(tweets[n+1:k, 2])), results[,"RF_LABEL"])
++recall_accuracy(as.numeric(as.factor(tweets[n+1:k, 2])), results[,"BAGGING_LABEL"])
++recall_accuracy(as.numeric(as.factor(tweets[n+1:k, 2])), results[,"TREE_LABEL"])
++recall_accuracy(as.numeric(as.factor(tweets[n+1:k, 2])), results[,"GLMNET_LABEL"])
++recall_accuracy(as.numeric(as.factor(tweets[n+1:k, 2])), results[,"SLDA_LABEL"])
++recall_accuracy(as.numeric(as.factor(tweets[n+1:k, 2])), results[,"BOOSTING_LABEL"])
++recall_accuracy(as.numeric(as.factor(tweets[n+1:k, 2])), results[,"NNET_LABEL"])
 +
 +
 +
