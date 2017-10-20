@@ -28,10 +28,10 @@
 +N=100000 #Number of tweets
 +S=100 #Radius
 +
-+entity1KE<-do.call(rbind,lapply(1:length(lats), function(i) searchTwitter("string",
++entity1KE<-try(do.call(rbind,lapply(1:length(lats), function(i) searchTwitter("string",
 +               lang=NULL,n=N,resultType="recent",
 +                             retryOnRateLimit=120,
-+                                geocode=paste(lats[i],lons[i],paste0(S,"kms"),sep=","))))
++                                geocode=paste(lats[i],lons[i],paste0(S,"kms"),sep=",")))))
 +
 +#Tweets cleaning and formatting
 +entity1KE<-twListToDF(entity1KE)
