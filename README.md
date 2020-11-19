@@ -1,4 +1,4 @@
-# Civic and Nation Cohesion Natural Language Processing Engine
+# NLP: Hate Speech Monitoring 
 
 [project vision or mission statement](https://mozilla.github.io/open-leadership-training-series/articles/introduction-to-open-leadership/stating-your-project-vision/)
 
