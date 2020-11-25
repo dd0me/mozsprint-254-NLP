@@ -46,7 +46,7 @@ Thanks for your interest in contributing to Civic and Nation Cohesion Natural La
 
 ## Participation Guidelines
 
-This project adheres to a [code of conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to Dome Okuku Jagalo or Rodgers Dome or Dome Okuku Jagalo
+This project adheres to a [code of conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to Dome Okuku Jagalo (dblojdome@gmail.com) or Rodgers Dome (domerogers@gmail.com)
 
 ## MozSprint
 
